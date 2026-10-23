@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "ashare": {
+      "type": "http",
+      "url": "https://ashare.net/mcp",
+      "headers": { "Authorization": "Bearer ${ASHARE_API_KEY}" }
+    }
+  }
+}

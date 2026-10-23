@@ -1,0 +1,21 @@
+{
+  "name": "ashare",
+  "version": "0.4.3",
+  "description": "Publish HTML or Markdown to ashare.net, share the link, collect comments on selected text, fix the document and close the threads.",
+  "author": {
+    "name": "Ivan Boitsov",
+    "url": "https://github.com/Magir"
+  },
+  "homepage": "https://ashare.net",
+  "privacyPolicyUrl": "https://ashare.net/privacy",
+  "repository": "https://github.com/Magir/ashare-plugin",
+  "keywords": [
+    "share",
+    "publish",
+    "comments",
+    "review",
+    "html",
+    "markdown"
+  ],
+  "license": "MIT"
+}

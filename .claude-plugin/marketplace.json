@@ -1,0 +1,12 @@
+{
+  "name": "ashare",
+  "description": "ashare.net: share agent artifacts and collect comments",
+  "owner": { "name": "Ivan Boitsov", "url": "https://github.com/Magir" },
+  "plugins": [
+    {
+      "name": "ashare",
+      "source": "./",
+      "description": "Publish HTML or Markdown to ashare.net, share the link, collect comments, fix, reply, resolve."
+    }
+  ]
+}
