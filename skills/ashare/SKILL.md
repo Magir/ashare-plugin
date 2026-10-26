@@ -5,7 +5,7 @@ description: Publish an HTML or Markdown document or a site of several files (re
 
 # ashare
 
-ashare.net hosts HTML and Markdown documents at a stable link. Readers open the link, select text and leave comments without an account. A new document is private: only the user and the people they share it with by email can open it. Every change is a new version at the same URL. The `ashare` MCP server gives you the tools below.
+ashare.net hosts HTML and Markdown documents at a stable link. Readers open the link, sign in with a code sent to their email, select text and leave comments. A new document is private: only the user and the people they share it with by email can open it. Every change is a new version at the same URL. The `ashare` MCP server gives you the tools below.
 
 ## Tools
 
@@ -37,7 +37,7 @@ ashare.net hosts HTML and Markdown documents at a stable link. Readers open the 
 2. Settle who can open it (see "Who can open it"): only the user, specific people by email, the user's organization or anyone with the link.
 3. Call `publish` with `content`, `format` (`html` or `md`) and an optional `title` (default: `<title>` or the first `#` heading), or with `files` instead of `content`. Add `visibility: "public"` or `"company"` only as settled in step 2. Add `expires_in` or `password` only when the user asked for them or agreed (see "Protect the link").
 4. For specific people, call `share` with the artifact id and their emails.
-5. Give the user the URL in your reply and say who can open it, as `publish` and `share` answered. Readers select text and comment without an account. Keep the artifact id (the last path segment) and the version.
+5. Give the user the URL in your reply and say who can open it, as `publish` and `share` answered. Readers sign in with an email code, select text and comment. Keep the artifact id (the last path segment) and the version.
 
 A large file you already have on disk does not need to go through the tool call: `curl -X POST 'https://ashare.net/api/artifacts?format=html' -H "Authorization: Bearer $ASHARE_API_KEY" --data-binary @report.html` returns `{id, url, version, expires_at, has_password, visibility}`. A new version of it: `POST /api/artifacts/<id>/versions?base_version=<N>` with the same body. Expiry and visibility go in the query (`&expires_in=7d`, `&visibility=public`), the password only in the `X-Ashare-Password` header: `?password=` is refused with 400.
 

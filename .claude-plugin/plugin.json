@@ -1,6 +1,6 @@
 {
   "name": "ashare",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Publish HTML or Markdown to ashare.net, share the link, collect comments on selected text, fix the document and close the threads.",
   "author": {
     "name": "Ivan Boitsov",
