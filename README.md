@@ -1,6 +1,6 @@
 # ashare plugin for Claude Code
 
-[ashare.net](https://ashare.net) hosts the HTML and Markdown documents your agent makes. You get a link, readers select text and comment without an account, the agent picks up the comments, fixes the document, replies and resolves the threads. Every change is a new version at the same link.
+[ashare.net](https://ashare.net) hosts the HTML and Markdown documents your agent makes and opens each one only to the people you choose: everyone on your company's email domain, specific people by email, or anyone with a password. Readers sign in with a code from their email, with no account to create. They can select text and comment; the agent picks up the comments, fixes the document, replies and resolves the threads. Every change is a new version at the same link.
 
 The plugin gives Claude Code two things:
 
