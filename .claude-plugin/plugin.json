@@ -1,6 +1,6 @@
 {
   "name": "ashare",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Publish HTML or Markdown to ashare.net and share it only with the right people: your company, specific emails or a password. Readers comment; the agent fixes the document and closes the threads.",
   "author": {
     "name": "Ivan Boitsov",

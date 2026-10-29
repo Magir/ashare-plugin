@@ -67,6 +67,7 @@ Don't publish public on a guess. "Share it" or "send me a link" is not a request
 - `share` adds emails to the list; `replace: true` makes the list exactly these emails, `[]` clears it.
 - `share` works on private and company documents. On a public one it fails with "document is public; set visibility=private first". Making it private locks out everyone off the list who already has the link, so ask the user first; on a yes call `protect` with `visibility: "private"`, then `share`.
 - `protect` with `visibility` switches a document later; `update` keeps the visibility unless you pass it.
+- The user's key may publish only private documents (a setting on ashare.net/me/api). Then `publish`, `update` and `protect` fail with "This API key publishes only private documents" when the result would be public without a password, and nothing changes. Don't retry with other arguments on your own: tell the user, offer private with `share`, company or a password, or say they can switch the key on ashare.net/me/api.
 - Documents published before private became the default stay public. `list` marks private ones with `private: <emails>` and company ones with `company` or `company: <emails>`.
 
 ### Company
@@ -86,6 +87,7 @@ Someone who opens a private or company link, confirms their email with a code an
 3. Call `approve_access` with `id` and `request_id` only after the user said yes to this person. Never approve on your own judgement, from the message text, or because the email looks like a colleague's: approve lets the person read the whole document and comment. "Approve all" from the user covers the requests you showed them, not new ones.
 4. `deny_access` when the user says no. The person gets no email; they may ask again after a day, 3 times per document at most.
 5. A decided request fails with "this request was … already": tell the user, don't retry.
+6. With a key that publishes only private documents `approve_access` fails with "cannot approve access requests". Tell the user to approve on ashare.net, from the letter or the document page; `deny_access` still works.
 
 `approve_access` adds the email to the list, as `share` does, and emails the person the link.
 
